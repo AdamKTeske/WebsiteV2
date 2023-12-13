@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Adam Teske</title>
+  <link rel="icon" href="Photos/Logos/A.png">
+  <style>
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- NAV BAR -->
+  <div class="nav-wrapper">
+    <div class="left-side">
+      <div class="link-wrapper home-icon">
+        <a class="fa fa-home" style="font-size:20px" href="1-index.html"></a>
+      </div>
+      <div class="link-wrapper">
+        <a href="2-portfolio.html">Portfolio</a>
+      </div>
+      <div class="link-wrapper active-nav-link">
+        <a href="3-resume.html">Resume</a>
+      </div>
+      <div class="link-wrapper">
+        <a href="4-bio.html">About Me</a>
+      </div>
+      <div class="link-wrapper">
+        <a href="5-contact.html">Contact</a>
+      </div>
+    </div>
+    
+    <div class="right-side">
+      <a class=" soc-link li-button" href="https://www.linkedin.com/in/adam-teske/" target="_blank"></a>
+      <a class=" soc-link gh-button" href="https://github.com/AdamKTeske/" target="_blank"></a>
+      <a class=" soc-link fb-button" href="https://www.facebook.com/adam.teske.5/" target="_blank"></a>
+    </div>
+  </div>
+
+  <iframe id="pdf-viewer" src="/Photos/resume2.pdf" frameborder="0"></iframe>
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <script>
+    // Cursor 
+    var cursor = document.querySelector(".cursor");
+    var cursor2 = document.querySelector(".cursor2");
+    document.addEventListener("mousemove",function(e) {
+      cursor.style.cssText = cursor2.style.cssText = "left: " + e.pageX + "px; top: " + e.pageY + "px;";
+    })
+  </script>
+
+</body>

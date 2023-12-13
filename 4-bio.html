@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Adam Teske</title>
+  <link rel="icon" href="Photos/Logos/A.png">
+  <style>
+    .nav-wrapper {
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="bio-background1" src="/Photos/Backgrounds/graphs.png">
+
+  <!-- NAV BAR -->
+  <div class="nav-wrapper">
+    <div class="left-side">
+      <div class="link-wrapper home-icon">
+        <a class="fa fa-home" style="font-size:20px" href="1-index.html"></a>
+      </div>
+      <div class="link-wrapper">
+        <a href="2-portfolio.html">Portfolio</a>
+      </div>
+      <div class="link-wrapper">
+        <a href="3-resume.html">Resume</a>
+      </div>
+      <div class="link-wrapper active-nav-link">
+        <a href="4-bio.html">About Me</a>
+      </div>
+      <div class="link-wrapper">
+        <a href="5-contact.html">Contact</a>
+      </div>
+    </div>
+    
+    <div class="right-side">
+      <a class=" soc-link li-button" href="https://www.linkedin.com/in/adam-teske/" target="_blank"></a>
+      <a class=" soc-link gh-button" href="https://github.com/AdamKTeske/" target="_blank"></a>
+      <a class=" soc-link fb-button" href="https://www.facebook.com/adam.teske.5/" target="_blank"></a>
+    </div>
+  </div>
+  
+    <!-- BODY -->
+  <div class="bio-container">
+    <div class="bio-title"> 
+      <h1>Professional Experience</h1>
+    </div>
+    <!-- Nerd Shit -->
+    <div class="bio-half nerd">
+
+      <div class="bio-pic nerd-image">
+        <img src="/Photos/Adam/Adam2.jpg">
+      </div>
+
+        <div class="rant nerd-rant"> 
+            <p>
+              In my all-too-brief time at Oberlin College, I discovered a genuine passion for solving problems using data. I used to think of statistics as mathematical purgatory, but have since found incredible satisfaction (and a shocking amount of creative freedom) in it. My goal now is to establish a career in which I get to help people make informed decisions using data analysis.<br><br>
+              I worked in the Oberlin Psychology Department as a TA as well as a research assistant, gaining extensive hands-on experience with RStudio, SQL, Python, Tableau, Excel, and long-term project management. I also had the privilege of working for and playing in Oberlin's renowned orchestra, logging hundreds of hours of work experience in arts management working alongside the Conservatory's exceptional faculty.<br><br>
+              Since graduating, I've found satisfying work as Lead Web Developer for Colorado Vocal Arts Ensemble, a phenomenal choir based here in Colorado Springs. I've spent most of my free time working on personal projects and professional certificates that focus on turning raw data into actionable insights. I most recently completed the Google Data Analytics Professional Certificate, giving me an excellent grasp on the entire data pipeline and how to effectively communicate your findings in a professional setting.
+            </p>
+            <div class="pflink">
+              <a class="pfbutton" href="portfolio.html" target="_parent">View my portfolio &#8594;</a>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Buffer -->
+        <div class="buffer">
+          <img id="bio-background2" src="/Photos/Backgrounds/mountains3.jpg">
+          <div class="bio-title"> 
+            <h1 style="color: black;">Personal Avocations</h1>
+          </div>
+        </div>
+
+    <!-- Cool Shit -->
+    <div class="bio-half cool">
+      
+      <div class="rant cool-rant">
+          <p>My passions are not entirely limited to data, of course. Having been raised by two musicians who came from musical families, I have practically no choice but to love performing and listening to music. My main instrument is trumpet, but I'll occasionally dabble in some piano and guitar if I'm feeling frisky. If you own an instrument and want to play some duets, don't be a stranger! 
+            <br><br>
+            I also started developing websites as a side hobby (which is quickly becoming a side gig) and creating 3D digital art in Blender. When I'm not obsessing over my newest hobby, you can catch me watching corny action films, reading historical fiction books, or hiking in the Rockies.</p>
+        <div class="pflink">
+          <!-- <a class="pfbutton" href="portfolio.html" target="_parent">
+            View my other projects &#8594;
+          </a> -->
+        </div>
+      </div>
+
+      <div class="bio-pic cool-image">
+        <img src="Photos/Adam/Adam1.jpg">
+      </div>
+
+    </div>
+  </div>
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <script>
+    // Cursor 
+    var cursor = document.querySelector(".cursor");
+    var cursor2 = document.querySelector(".cursor2");
+    document.addEventListener("mousemove",function(e) {
+      cursor.style.cssText = cursor2.style.cssText = "left: " + e.pageX + "px; top: " + e.pageY + "px;";
+    })
+  </script>
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script> 
+  <script> 
+    
+    // Parallax Background
+    /*var bio = document.querySelector("#bio-background")
+    document.addEventListener("scroll", function(e) {
+      let scroll_val = window.pageYOffset;
+
+      bio.style.filter = "blur(" + e.scroll_val  + "px);"
+      bio.style.left = e.scroll_val * 2.5 + 'px;'
+    })*/
+    gsap.from("#bio-background1", {
+      scrollTrigger: {
+        scrub: true
+      },
+      y: 200,
+    })
+    gsap.from("#bio-background2", {
+      scrollTrigger: {
+        scrub: true
+      },
+      y: -200,
+    })
+
+  </script>  
+</body>
+</html>
