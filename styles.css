@@ -27,11 +27,13 @@
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: .0s;}
-  @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
-    .cursor2 {
-      visibility: collapse;
-    }
-  }
+
+  @media not all and (min-resolution:.001dpcm) { 
+    @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
+      .cursor2 {
+        visibility: collapse;
+      }
+    }}
   
 
 
