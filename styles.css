@@ -29,7 +29,7 @@
   transition: .0s;}
 
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
-  .cursor2 {
+  .cursor2, .cursor {
     visibility: collapse;
   }
 }
@@ -196,13 +196,10 @@ body {
   padding: 0.2em;
   color: transparent;}
 .profile-container p {
-  background: url(/Photos/Backgrounds/Grey1.jpg);
-  background-size: cover;
-  -webkit-background-clip: text;
-          background-clip: text;
+
   font-size: clamp(0.5rem, 1.75vw, 6rem);
   margin: 1vh;
-  color: transparent;}
+  color: white;}
     /* Logo */
 .logo-wrapper {
   height: 30vh;
@@ -335,12 +332,13 @@ body {
     min-height: 100%;
   }
   .intro {
-    height: 30vh;
+    height: 20vh;
   }
   .logo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10vh;
   }
   .logo {
     transform: scale(0.3)
@@ -350,7 +348,7 @@ body {
     padding: 5px;
   }
   #menu {
-    height: 50vh;
+    height: 70vh;
   }
   #menu-bar {
     display: flex;
