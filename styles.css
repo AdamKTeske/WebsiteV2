@@ -534,6 +534,42 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #port-pic {
+    visibility: collapse;
+  } 
+  .blurb {
+    height: 40vh;
+  }
+  #pipeline {
+    padding: 0 10px;
+  }
+  #pipeline h1 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  #pipeline p {
+    font-size: 0.75rem
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .column {
+    border: none;
+    margin-top: 40px;
+  }
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+  }
+  .item {
+    color: white;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 
 
 
@@ -789,7 +825,7 @@ form button {
   /* cursor: pointer; */
 }
 
-  @media screen and (max-width: 1000px) { 
+  @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
     .contact-me {
       display: flex;
       flex-direction: column;
