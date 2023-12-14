@@ -341,7 +341,8 @@ body {
     height: 10vh;
   }
   .logo {
-    transform: scale(0.3)
+    transform: scale(0.3);
+    margin: auto;
   }
   .profile-container p {
     font-size: 0.75rem;
@@ -360,9 +361,6 @@ body {
     margin: 1vh 0;
     display: flex;
     justify-content: center;
-  }
-  .menu-item p {
-    /* margin: 10px; */
   }
   .menu-logo {
     visibility: collapse;
@@ -601,6 +599,14 @@ body {
 .buffer {
   height: 50vh;
   background-color: transparent;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.buffer h1 {
+  color: black;
+  font-size: 6vw;
 }
 .cool {
   display: grid;
