@@ -28,12 +28,11 @@
   transform: translate(-50%, -50%);
   transition: .0s;}
 
-  @media not all and (min-resolution:.001dpcm) { 
-    @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
-      .cursor2 {
-        visibility: collapse;
-      }
-    }}
+@media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
+  .cursor2 {
+    visibility: collapse;
+  }
+}
   
 
 
@@ -146,7 +145,6 @@ body {
   opacity: 1;
   transition: all 0.35s;
 }
-@media not all and (min-resolution:.001dpcm) { 
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
   .nav-wrapper {
     font-size: 0.5rem;
@@ -168,8 +166,8 @@ body {
   .soc-link {
     visibility: collapse;
     width: 0;
-  }}}
-
+  }
+}
 
 
 /* HOME */
@@ -268,10 +266,13 @@ body {
   position: relative;
   width: clamp(10vw, 20vw, 30vw);
   height: clamp(5vh, 20vh, 20vh);
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  /* display: flex;
+  flex-direction: column; */
+  justify-content: center;
   align-items: center;
+  text-align: center;
   background: radial-gradient(rgba(35, 110, 101, 0.727), rgba(19, 137, 131, 0.5) 100%);
   border-radius: 3px;
   border: 1px solid black;
@@ -294,8 +295,7 @@ body {
 .menu-item::before {
   background: radial-gradient(
     1000px circle at var(--mouse-x) var(--mouse-y), 
-    rgba(207, 290, 119, 0.3), transparent 40%
-  );
+      rgba(207, 290, 119, 0.3), transparent 40%);
   opacity: 0;
   transition: opacity 500ms;
   border-radius: inherit;
@@ -309,26 +309,23 @@ body {
 .menu-logo {
   height: 10vh;
   width: 10vh;
+  margin: auto;
   opacity: 0.25;
   margin-top: 1vh;
   transition: all 0.3s;
 }
 .menu-item:hover > .menu-logo {
-  opacity: 1;
-}
+  opacity: 1;}
 #menu-bar:hover .menu-item {
   opacity: 0.5;
   -webkit-filter: blur(2px);
-          filter: blur(2px);
-}
+          filter: blur(2px);}
 #menu-bar:hover .menu-item:hover {
   opacity: 1;
   -webkit-filter: blur(0);
-          filter: blur(0);
-}
+          filter: blur(0);}
 
-@media not all and (min-resolution:.001dpcm) { 
-@media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
+@media  (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
   body {
     overflow-y: visible !important;
   }
@@ -357,23 +354,23 @@ body {
   }
   #menu-bar {
     display: flex;
-    flex-direction: column;
   }
   .menu-item {
-    width: 75vw;
-    height: 7vh;
+    width: 65vw;
+    max-height: 7vh;
     font-size: 1.3rem;
-    margin: 2vh 0;
+    margin: 1vh 0;
+    display: flex;
     justify-content: center;
   }
   .menu-item p {
-    margin: 10px;
+    /* margin: 10px; */
   }
   .menu-logo {
     visibility: collapse;
+    position: absolute;
   }
-}}
-
+}
 
 
 
@@ -506,13 +503,12 @@ body {
   text-shadow: 0px 0.5px 0px rgb(0, 125, 134);
 }
 
-@media not all and (min-resolution:.001dpcm) { 
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) {
   #port-pic {
     visibility: collapse;
   } 
   .blurb {
-    height: 40vh;
+    min-height: 40vh;
   }
   #pipeline {
     padding: 0 10px;
@@ -542,7 +538,7 @@ body {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
   }
-}}
+}
 
 
 
@@ -550,8 +546,9 @@ body {
 /* RESUME */
 #pdf-viewer {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 }
+
 
 
 
@@ -653,11 +650,13 @@ body {
   color: var(--maincolor);
   text-shadow: -0.5px 0.5px 0px rgb(7, 89, 95);
 }
-@media not all and (min-resolution:.001dpcm) { 
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
   #bio-background2 {
-    top: 72rem;
-    height: 100%;
+    position: relative;
+    top: -14vw;
+    /* width: 200vw; */
+    /* height: 100vh; */
+    justify-content: center;
   }
   .bio-half {
     padding-top: 4vh;
@@ -676,6 +675,9 @@ body {
   .bio-title {
     padding: 10px;
   }
+  .buffer h1 {
+    visibility: collapse;
+  }
   .bio-title h1 {
     font-size: 2rem;
   }
@@ -683,7 +685,7 @@ body {
     font-size: 4vw;
     line-height: 130%;
   }
-}}
+}
 
 
 
@@ -798,7 +800,7 @@ form button {
   color: white;
   /* cursor: pointer; */
 }
-@media not all and (min-resolution:.001dpcm) { 
+
   @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
     .contact-me {
       display: flex;
@@ -830,4 +832,4 @@ form button {
     .form-control-submit {
       margin-bottom: 5vh;
     }
-  }}
+  }
