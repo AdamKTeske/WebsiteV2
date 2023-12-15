@@ -332,24 +332,25 @@ body {
     min-height: 100%;
   }
   .intro {
-    height: 20vh;
+    height: 15vh;
   }
   .logo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 25vh;
   }
   .logo {
     transform: scale(0.3);
     margin: auto;
+    margin-top: 6vh;
   }
   .profile-container p {
     font-size: 0.75rem;
     padding: 5px;
   }
   #menu {
-    height: 70vh;
+    height: 60vh;
   }
   #menu-bar {
     display: flex;
@@ -530,9 +531,12 @@ body {
     border-bottom: 2px solid white;
   }
   .item {
-    color: white;
     background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .item p {
+    color: var(--maincolor);
+    text-shadow: -0.5px 0.5px 0px white;
   }
 }
 
@@ -600,6 +604,7 @@ body {
   height: 50vh;
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -675,18 +680,19 @@ body {
   }
   .bio-pic {
     visibility: collapse;
+    position: absolute;
   }
   .bio-title {
     padding: 10px;
   }
   .buffer h1 {
-    visibility: collapse;
+    color: transparent !important;
   }
   .bio-title h1 {
     font-size: 2rem;
   }
   .rant p {
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 130%;
   }
 }
