@@ -2,7 +2,7 @@
     
     /* Colors */
 :root {
-  --maincolor: rgb(0,77,77);
+  --maincolor: #157f81;
   --accentcolor: rgb(130, 144, 139);}
     /* Cursors */
 .cursor {
@@ -15,7 +15,7 @@
   top: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: .075s;}
+  transition: .0s;}
 .cursor2 {
   position: absolute;
   width: 5px;
@@ -188,7 +188,7 @@ body {
   color: white;
   height: 100%;}
 .profile-container h1 {
-  background: url(/Photos/Backgrounds/Teal1.jpg);
+  background: url(/Photos/Backgrounds/Teal2.jpg);
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
@@ -196,10 +196,14 @@ body {
   padding: 0.2em;
   color: transparent;}
 .profile-container p {
-
+  background: url(/Photos/Backgrounds/Teal2.jpg);
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
   font-size: clamp(0.5rem, 1.75vw, 6rem);
   margin: 1vh;
-  color: white;}
+  color: rgba(255, 255, 255, 0.5);
+}
     /* Logo */
 .logo-wrapper {
   height: 30vh;
@@ -210,13 +214,15 @@ body {
 .logo {
   position: absolute;
   transform: scale(0.7)}
-.hist {
-  -webkit-animation: fill 4.5s ease forwards 2.25s, fill 4s ease forwards 27s, fill 4s ease forwards 51s;
-          animation: fill 4.5s ease forwards 2.25s, fill 4s ease forwards 27s, fill 4s ease forwards 51s;}
+
+  .hist2-0 {
+  fill: white;
+  opacity: 0;}
 .pie {
-  -webkit-animation: fill 4.5s ease forwards 10.5s, fill 4s ease forwards 35s,fill 4s ease forwards 59.5s;
-          animation: fill 4.5s ease forwards 10.5s, fill 4s ease forwards 35s,fill 4s ease forwards 59.5s;
-  opacity: 0.8;}
+   opacity: 0.8;}
+.pie2-0 {
+  fill: white;
+  opacity: 0;}
 .pie1 {
   stroke-dasharray: 841.62px;stroke-dashoffset: 841.62px;}
 .pie2 {
@@ -225,26 +231,13 @@ body {
   stroke-dasharray: 435.73px;stroke-dashoffset: 435.73px;}
 .pie4 {
   stroke-dasharray: 533.96px;stroke-dashoffset: 533.96px;}
-.line {
-  -webkit-animation: fill 4.7s ease forwards 18.5s,
-  fill 4s ease forwards 43s,
-  fill 4s ease forwards 67s;
-          animation: fill 4.7s ease forwards 18.5s,
-  fill 4s ease forwards 43s,
-  fill 4s ease forwards 67s;}
-@-webkit-keyframes fill {
-  0%{fill: transparent;}
-  30%{fill: white;}
-  70% {fill: white;}
-  100%{fill: transparent;}}
-@keyframes fill {
-  0%{fill: transparent;}
-  30%{fill: white;}
-  70% {fill: white;}
-  100%{fill: transparent;}}
+.line2-0 {
+  fill: white;
+  opacity: 0;}
+
     /* Menu */
 .bottom {
-  background: linear-gradient(0deg, rgba(0, 60, 54, 0.6), transparent 80%);}
+  background: linear-gradient(0deg, #157f815d, transparent 80%);}
 #menu {
   height: 30vh;
   display: flex;
@@ -270,20 +263,20 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(rgba(35, 110, 101, 0.727), rgba(19, 137, 131, 0.5) 100%);
+  background: radial-gradient(#157f81, #157f81b5 100%);
   border-radius: 3px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px black;
   margin: 4vh 1vw;
   padding: 1vw;
-  color: rgb(207, 240, 255);
+  color: white;
   font-size: clamp(1rem, 2vw, 3.5rem);
   text-decoration: none;
   transition: all 0.5s;}
-/* .menu-item p {
-  opacity: 0.85;}
 .menu-item:hover p {
-  opacity: 1;} */
+  text-decoration: underline;
+  transition: all 0.25s;
+} 
 .menu-item:hover {
   box-shadow: 0px 3px 20px rgb(0, 0, 0);
   transform: translateY(-10px);} 
@@ -292,7 +285,7 @@ body {
 .menu-item::before {
   background: radial-gradient(
     1000px circle at var(--mouse-x) var(--mouse-y), 
-      rgba(207, 290, 119, 0.3), transparent 40%);
+      rgba(13, 36, 78, 0.6), transparent 40%);
   opacity: 0;
   transition: opacity 500ms;
   border-radius: inherit;
@@ -307,7 +300,7 @@ body {
   height: 10vh;
   width: 10vh;
   margin: auto;
-  opacity: 0.25;
+  opacity: 0.35;
   margin-top: 1vh;
   transition: all 0.3s;
 }
@@ -470,7 +463,7 @@ body {
   padding: 3vw;
   margin: 3vw 0px;
   background-position: center;
-  border: 3px solid teal;
+  border: 3px solid var(--maincolor);
   overflow: hidden;
   color: transparent;
   transition: 0.3s;}
@@ -726,7 +719,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
-  border: 1px solid teal;
+  border: 1px solid var(--maincolor);
   margin: auto;
   margin-bottom: 90px;
   width: 61%; }
@@ -737,7 +730,7 @@ body {
   margin: 10px;
   padding-top: 30px;
   padding-bottom: 10px;
-  color: rgb(0, 77, 77);}
+  color: var(--maincolor);}
 .personal-info p {
   display: flex;
   justify-content: center;
