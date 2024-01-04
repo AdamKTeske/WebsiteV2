@@ -188,7 +188,7 @@ body {
   color: white;
   height: 100%;}
 .profile-container h1 {
-  background: url(/Photos/Backgrounds/Teal2.jpg);
+  background: url(/Photos/Backgrounds/teal2.jpg);
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
@@ -196,7 +196,7 @@ body {
   padding: 0.2em;
   color: transparent;}
 .profile-container p {
-  background: url(/Photos/Backgrounds/Teal2.jpg);
+  background: url(/Photos/Backgrounds/teal2.jpg);
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
