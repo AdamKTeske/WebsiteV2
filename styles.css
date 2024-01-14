@@ -239,8 +239,6 @@ body {
   opacity: 0;}
 
     /* Menu */
-.bottom {
-  /* background: linear-gradient(0deg, #157f815d, transparent 80%);} */
 #menu {
   height: 30vh;
   display: flex;
@@ -268,7 +266,7 @@ body {
   text-align: center;
   /* background: radial-gradient(#157f81, #157f81b5 100%); */
   background-color: var(--textcolor);
-  border-radius: 19px;
+  border-radius: 3px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px black;
   margin: 4vh 1vw;
