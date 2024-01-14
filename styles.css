@@ -28,11 +28,11 @@
   transform: translate(-50%, -50%);
   transition: .0s;}
 
-@media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
+/* @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
   .cursor2, .cursor {
     visibility: collapse;
   }
-}
+} */
   
 
 
