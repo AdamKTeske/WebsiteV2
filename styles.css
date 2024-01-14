@@ -3,7 +3,9 @@
     /* Colors */
 :root {
   --maincolor: #157f81;
-  --accentcolor: rgb(130, 144, 139);}
+  --accentcolor: rgb(130, 144, 139);
+  --textcolor: rgb(183, 193, 196);
+}
     /* Cursors */
 .cursor {
   position: absolute;
@@ -53,7 +55,6 @@ body {
   min-height: 100vh;
   background-color: black;
   cursor: none;
-  background-color: black;
 }
 
 
@@ -174,7 +175,9 @@ body {
 .index-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  height: 100vh;}
+  height: 100vh;
+  background-color: rgb(5, 17, 24);
+}
     /* Intro */
 .top {
   display: flex;
@@ -188,7 +191,7 @@ body {
   color: white;
   height: 100%;}
 .profile-container h1 {
-  background: url(/Photos/Backgrounds/teal2.jpg);
+  background: url(/Photos/Backgrounds/grey2.jpg);
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
@@ -196,7 +199,7 @@ body {
   padding: 0.2em;
   color: transparent;}
 .profile-container p {
-  background: url(/Photos/Backgrounds/teal2.jpg);
+  background: url(/Photos/Backgrounds/grey2.jpg);
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
@@ -215,13 +218,13 @@ body {
   position: absolute;
   transform: scale(0.7)}
 
-  .hist2-0 {
-  fill: white;
+.hist2-0 {
+  fill: var(--textcolor);
   opacity: 0;}
 .pie {
    opacity: 0.8;}
 .pie2-0 {
-  fill: white;
+  fill: var(--textcolor);
   opacity: 0;}
 .pie1 {
   stroke-dasharray: 841.62px;stroke-dashoffset: 841.62px;}
@@ -232,12 +235,12 @@ body {
 .pie4 {
   stroke-dasharray: 533.96px;stroke-dashoffset: 533.96px;}
 .line2-0 {
-  fill: white;
+  fill: var(--textcolor);
   opacity: 0;}
 
     /* Menu */
 .bottom {
-  background: linear-gradient(0deg, #157f815d, transparent 80%);}
+  /* background: linear-gradient(0deg, #157f815d, transparent 80%);} */
 #menu {
   height: 30vh;
   display: flex;
@@ -263,18 +266,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(#157f81, #157f81b5 100%);
-  border-radius: 3px;
+  /* background: radial-gradient(#157f81, #157f81b5 100%); */
+  background-color: var(--textcolor);
+  border-radius: 19px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px black;
   margin: 4vh 1vw;
   padding: 1vw;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: clamp(1rem, 2vw, 3.5rem);
   text-decoration: none;
   transition: all 0.5s;}
 .menu-item:hover p {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   transition: all 0.25s;
 } 
 .menu-item:hover {
@@ -285,7 +289,7 @@ body {
 .menu-item::before {
   background: radial-gradient(
     1000px circle at var(--mouse-x) var(--mouse-y), 
-      rgba(88, 137, 137, 0.6), transparent 40%);
+      rgba(0, 0, 0, 0.3), transparent 40%);
   opacity: 0;
   transition: opacity 500ms;
   border-radius: inherit;
@@ -300,7 +304,7 @@ body {
   height: 10vh;
   width: 10vh;
   margin: auto;
-  opacity: 0.35;
+  /* opacity: 0.35; */
   margin-top: 1vh;
   transition: all 0.3s;
 }
@@ -311,6 +315,7 @@ body {
   -webkit-filter: blur(2px);
           filter: blur(2px);}
 #menu-bar:hover .menu-item:hover {
+  background-color: var(--maincolor);
   opacity: 1;
   -webkit-filter: blur(0);
           filter: blur(0);}
