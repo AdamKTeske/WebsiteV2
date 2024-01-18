@@ -2,7 +2,7 @@
     
     /* Colors */
 :root {
-  --maincolor: #157f81;
+  --maincolor: #156681;
   --accentcolor: rgb(130, 144, 139);
   --textcolor: rgb(183, 193, 196);
 }
@@ -266,7 +266,7 @@ body {
   text-align: center;
   /* background: radial-gradient(#157f81, #157f81b5 100%); */
   background-color: var(--textcolor);
-  border-radius: 3px;
+  border-radius: 15px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px black;
   margin: 4vh 1vw;
@@ -440,15 +440,7 @@ body {
   -webkit-filter: none;
           filter: none;
 }
-.column1 {
-  border-left: 2px solid white;
-  border-right: 2px solid white;
-}
-.column2 {
-  border-left: 2px solid white;
-  border-right: 2px solid white;
-}
-.column3 {
+.column {
   border-left: 2px solid white;
   border-right: 2px solid white;
 }
@@ -466,10 +458,13 @@ body {
   padding: 3vw;
   margin: 3vw 0px;
   background-position: center;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.3);
   border: 3px solid var(--maincolor);
   overflow: hidden;
   color: transparent;
-  transition: 0.3s;}
+  transition: 0.3s;
+}
 .item:hover {
   color: white;
   transform: scale(1.005);
@@ -493,7 +488,7 @@ body {
 }
 .morebutton:hover {
   color: var(--maincolor);
-  text-shadow: 0px 0.5px 0px rgb(0, 125, 134);
+  text-shadow: 0px 0.5px 0px rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) {
@@ -646,21 +641,18 @@ body {
   text-align: center;
 }
 .pfbutton {
-  color: rgb(0, 125, 134);
+  color: var(--maincolor);
   text-decoration: none;
-  text-shadow: 0px 1px 1px rgb(0, 125, 134);
   transition: all 0.3s;
 }
 .pfbutton:hover {
-  color: var(--maincolor);
+  color: rgb(15, 124, 70);
   text-shadow: -0.5px 0.5px 0px rgb(7, 89, 95);
 }
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
   #bio-background2 {
     position: relative;
     top: -14vw;
-    /* width: 200vw; */
-    /* height: 100vh; */
     justify-content: center;
   }
   .bio-half {
@@ -781,8 +773,8 @@ form input, form textarea {
   background: transparent;
   outline: none;
   border: none;
-  border-top: 1px solid rgb(0, 77, 77);
-  border-left: 1px solid rgb(0, 77, 77);
+  border-top: 1px solid var(--maincolor);
+  border-left: 1px solid var(--maincolor);
   margin-bottom: 32px;
   color: rgb(197, 197, 197);
   font-size: 18px;
