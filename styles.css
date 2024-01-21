@@ -31,14 +31,14 @@
   transform: translate(-50%, -50%);
   transition: .0s;}
 
-
+    /* Loader */
 .loader {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: var(--secondmaincolor);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +49,8 @@
   content: "";
   width: 75px;
   height: 75px;
-  border: 15px solid var(--textcolor);
-  border-top-color: var(--secondmaincolor);
+  border: 10px solid var(--secondmaincolor);
+  border-top-color: var(--textcolor);
   border-radius: 50%;
   animation: loading 1s linear infinite;
 }
@@ -60,12 +60,8 @@
   z-index: -10;
 }
 @keyframes loading {
-  from{
-    transform: rotate(0turn);
-  }
-  to{
-    transform: rotate(1turn);
-  }
+  from{transform: rotate(0turn);}
+  to{transform: rotate(1turn);}
 }
 /* @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 
   .cursor2, .cursor {
@@ -821,7 +817,7 @@ form input, form textarea {
 form button {
   width: 10em;
   background: black;
-  border: 1px solid rgb(0, 77, 77);
+  border: 1px solid var(--maincolor);
   color: grey;
   font-size: 18px;
   font-weight: 500;
@@ -831,9 +827,9 @@ form button {
   transition: all 0.4s;
   text-align: center}
 .form-control-submit:hover {
-  background: rgb(0, 77, 77);
+  background: var(--maincolor);
   color: white;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
   @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio:0) { 

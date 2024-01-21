@@ -18,7 +18,8 @@
 </head>
 
 <body>
-  
+  <div class="loader"></div>
+
   <!-- NAV BAR -->
   <div class="nav-wrapper">
     <div class="left-side">
@@ -88,7 +89,14 @@
     <div class="cursor"></div>
     <div class="cursor2"></div>
     <script>
-        // Cursor 
+       //Loader 
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader")
+        loader.classList.add("loader-hidden");
+        loader.classList.remove("loader");
+      }) 
+      
+      // Cursor 
         var cursor = document.querySelector(".cursor");
         var cursor2 = document.querySelector(".cursor2 ");
         document.addEventListener("mousemove",function(e) {
