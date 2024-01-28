@@ -226,6 +226,7 @@ body {
 .profile-container h1 {
   background: url(/Photos/Backgrounds/grey2.jpg);
   background-size: cover;
+  background-color: var(--textcolor);
   -webkit-background-clip: text;
           background-clip: text;
   font-size: clamp(1.5rem, 10vw, 20vw);
