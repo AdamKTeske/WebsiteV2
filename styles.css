@@ -8,7 +8,7 @@
   --textcolor: rgb(212, 221, 224);
 }
     /* Cursors */
-.cursor {
+/* .cursor {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -18,7 +18,7 @@
   top: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: .05s;}
+  transition: .05s;} */
 .cursor2 {
   position: absolute;
   width: 5px;
